@@ -1,8 +1,8 @@
 resource "aws_security_group" "Roboshop-sg" {
   count = length(var.instances)
-  name        = "${var.instances[count.index]}-${var.project}-${environment}"
+  name        = "${var.instances[count.index]}-${var.project}-${var.environment}"
   description = "Allowing traffic for ${var.instances[count.index]} for ${var.project} in ${var.environment}"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = "$vpc_id"
 
 
 
