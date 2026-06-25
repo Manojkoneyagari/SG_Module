@@ -10,6 +10,6 @@ variable "environment" {
 
 
 variable "instances" {
-    type = List 
+    type = list 
     default = []
 }
