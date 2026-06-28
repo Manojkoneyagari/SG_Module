@@ -4,6 +4,7 @@ resource "aws_security_group" "Roboshop-sg" {
   description = "Allowing traffic for ${var.instances[count.index]} for ${var.project} in ${var.environment}"
   vpc_id      = "${local.vpc_id}"
 
+#Added first comment
 
    egress {
     from_port        = 0
